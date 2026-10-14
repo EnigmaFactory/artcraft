@@ -31,7 +31,7 @@
     "lightcraft": {
       "type": "stdio",
       "command": "${LIGHTCRAFT_CLI:-C:/Program Files/LightCraft/lightcraft-cli.exe}",
-      "args": ["mcp", "${CONCEPTS_DIR:-N:/Enigma Factory/ArtCraft/concepts}"]
+      "args": ["mcp"]
     },
     "effectcraft": {
       "type": "stdio",
