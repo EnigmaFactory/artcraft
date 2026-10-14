@@ -1,0 +1,57 @@
+{
+  "mcpServers": {
+    "photocraft": {
+      "type": "stdio",
+      "command": "${PHOTOCRAFT_CLI:-C:/Program Files/PhotoCraft/photocraft-cli.exe}",
+      "args": [
+        "mcp",
+        "--automation-read-root", "${CONCEPTS_DIR:-N:/Enigma Factory/ArtCraft/concepts}",
+        "--automation-write-root", "${CONCEPTS_DIR:-N:/Enigma Factory/ArtCraft/concepts}"
+      ]
+    },
+    "designcraft": {
+      "type": "stdio",
+      "command": "${DESIGNCRAFT_CLI:-C:/Program Files/DesignCraft/designcraft-cli.exe}",
+      "args": ["mcp"]
+    },
+    "vectorcraft": {
+      "type": "stdio",
+      "command": "${VECTORCRAFT_CLI:-C:/Program Files/VectorCraft/vectorcraft-cli.exe}",
+      "args": [
+        "mcp",
+        "--automation-read-root", "${CONCEPTS_DIR:-N:/Enigma Factory/ArtCraft/concepts}",
+        "--automation-write-root", "${CONCEPTS_DIR:-N:/Enigma Factory/ArtCraft/concepts}"
+      ]
+    },
+    "filmcraft": {
+      "type": "stdio",
+      "command": "${FILMCRAFT_CLI:-C:/Program Files/FilmCraft/filmcraft-cli.exe}",
+      "args": ["mcp"]
+    },
+    "lightcraft": {
+      "type": "stdio",
+      "command": "${LIGHTCRAFT_CLI:-C:/Program Files/LightCraft/lightcraft-cli.exe}",
+      "args": ["mcp", "${CONCEPTS_DIR:-N:/Enigma Factory/ArtCraft/concepts}"]
+    },
+    "effectcraft": {
+      "type": "stdio",
+      "command": "${EFFECTCRAFT_CLI:-C:/Program Files/EffectCraft/effectcraft-cli.exe}",
+      "args": ["mcp"]
+    },
+    "coplay-mcp": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["coplay-mcp-server@latest"],
+      "env": { "MCP_TOOL_TIMEOUT": "720000" }
+    },
+    "UnityMCP": {
+      "type": "http",
+      "url": "${UNITY_MCP_URL:-http://127.0.0.1:8080/mcp}"
+    },
+    "MCP_DOCKER": {
+      "type": "stdio",
+      "command": "docker",
+      "args": ["mcp", "gateway", "run", "--profile", "${DOCKER_MCP_PROFILE:-dokcer_mcp}"]
+    }
+  }
+}
