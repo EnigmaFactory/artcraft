@@ -40,6 +40,14 @@ add a connected server locally (not checked in), for example:
 claude mcp add -s local designcraft-app -- "C:/Program Files/DesignCraft/designcraft-cli.exe" mcp --connect 7979
 ```
 
+## Guides, plans and flows
+
+- `enigma/guides/adrullan-style-guide.md`: the Adrullan Online Adventures brand and style guide (from aoa-web).
+- `enigma/plans/capture-to-trailer.md`: the Character Studio capture → compile → trailer pipeline plan.
+- `enigma/flows/`: scripted Craft-app flows over MCP. `mcp-client.js` is a minimal stdio client;
+  `adrullan-brand-sheet.js` renders the brand sheet through DesignCraft into `concepts/Adrullan/`;
+  `pad-md-tables.js` aligns Markdown tables (repo rule).
+
 ## Working conventions
 
 - Put concept output in `concepts/<project-name>/` (gitignored), named after the Enigma Factory project folder,
